@@ -47,7 +47,7 @@ public class Role implements Serializable {
     @Basic(optional = false)
     @Column(name = "role_name")
     private String roleName;
-    @JoinTable(name = "user-roles", joinColumns = {
+    @JoinTable(name = "user_roles", joinColumns = {
         @JoinColumn(name = "role_id", referencedColumnName = "role_id")}, inverseJoinColumns = {
         @JoinColumn(name = "user_id", referencedColumnName = "user_id")})
     @ManyToMany

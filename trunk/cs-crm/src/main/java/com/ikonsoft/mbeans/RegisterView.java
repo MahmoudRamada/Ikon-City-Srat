@@ -2,15 +2,13 @@ package com.ikonsoft.mbeans;
 
 import com.ikonsoft.model.User;
 import com.ikonsoft.services.UserService;
-import java.io.Serializable;
-import java.util.Date;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
 @ManagedBean
 @RequestScoped
-public class RegisterView implements Serializable {
+public class RegisterView  {
 
     private User user=new User();
     private List<String> questions;
@@ -53,8 +51,10 @@ public class RegisterView implements Serializable {
                
               return user;
     }
-public void saveUser(){
+public String saveUser(){
     UserService userService= new UserService();
-    userService.createUser(user);
+   int userId= userService.createUser(user);
+   if (userId>0) return "RegDone";
+   return null;
 }
 }
