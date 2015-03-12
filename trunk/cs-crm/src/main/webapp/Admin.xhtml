@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        
+ <ui:include src="views/header.xhtml" />
+ 
+    </h:head>
+    <h:body>
+               
+<br />
+<div class="wrap" >
+    <div class="contact-form">
+<!-- start-form -->
+	<h:form class="contact_form" action="#" method="post" name="contact_form">
+		<h1>Login Into Customer Service</h1>
+	    <ul>
+	        <li>
+	           <p:inputText   styleClass="textbox1" id="email" placeholder="info@Citystars.com"/>
+                    
+	            <span class="form_hint">Enter a valid email</span>
+	             <p><img src="../resources/img/contact.png" alt="" /></p>
+	        </li>
+	        <li>
+                    <p:password    name="website" styleClass="textbox2" placeholder="password"/>
+	            <p><img src="../resources/img/lock.png" alt="" /></p>
+	        </li>
+         </ul>
+       	 <ul>
+       	 <li> 
+    	<p:commandButton  	 style="background: none repeat scroll 0% 0% #79B42B;
+									width: 100%;
+									padding: 12px;
+									font-size: 1.3em;
+									border: medium none;
+									outline: medium none;
+									color: #FFF;float: left;
+									font-family:  Rokkitt ,serif;
+									transition: all 0.5s ease-out 0s;
+									border-radius: 2px;									 
+									letter-spacing: 1px;									 
+									transition: all 0.5s ease-out 0s;
+													border-radius: 2px" value="Sign In"/> 
+    	 
+    	<div class="clear"></div>
+    	 
+    	</li>
+       	 </ul>	 
+			<div class="clear"></div>
+			
+		<p/>		
+    <ul>
+   <li> <p:selectBooleanCheckbox styleClass="checkbox" label="Remember me" itemLabel="Remember me"/></li> 
+    <li>  
+  
+  
+ 	  <p:link outcome="forgetPassword"   value="forgot password?">
+   	 <f:param name="userId" value="10" />
+	</p:link></li>
+		 
+		   </ul>
+		<div class="clear"></div>	
+	</h:form>
+<!-- end-form -->
+
+
+
+<!-- start-account -->
+<div class="account">
+	<center><a href="#">Log in Other Roles ! </a></center>
+        <div  class="span"><a href="Users_Login_Business.xhtml"><img src="../resources/img/facebook.png" alt=""/><i>Sign In as Business User</i><div class="clear"></div></a></div>	
+        <div class="span1"><a href="Users_Login_ITSupport.xhtml"><img src="../resources/img/twitter.png" alt=""/><i>Sign In as IT Support User</i><div class="clear"></div></a></div>
+        <div class="span2"><a href="Users_Login_SuperUser.xhtml"><img src="../resources/img/gplus.png" alt=""/><i>Sign In as Super User</i><div class="clear"></div></a></div>
+</div>	
+<!-- end-account -->
+<div class="clear"></div>	
+</div>
+    </div>
+<br/>
+        <!--footer --> 
+ <ui:include src="views/footer.xhtml" />
+    
+</h:body>
+
+</html>

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+       
+ <ui:include src="views/header.xhtml" />
+    </h:head>
+    <h:body>
+               
+
+ <section id="Portfolio" class="content"> 
+
+ <form  id="msform"  action="RegDone.html">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active">Account Setup</li>
+		<li>Social Profiles</li>
+		<li>Personal Details</li>
+		<li>Personal Details</li>
+		
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h2 class="fs-title">Create Corporat Account</h2>
+		<h3 class="fs-subtitle">Account Details</h3>
+		<input type="text" name="CompanyEmail" placeholder="Company Email" />
+		<input type="text" name="CompanyName" placeholder="Company Name" />
+		<input type="password" name="pass" placeholder="Password" />
+		<input type="password" name="cpass" placeholder="Confirm Password" />
+		
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">Company Details</h2>
+		<h3 class="fs-subtitle">Connect with Our Customers</h3>
+		<input type="text"  name="YearofCompanyFormation" placeholder="Year of Company Formation" />
+		<input type="text"  name="CompanyRegistrationNumber" placeholder="Company Registration Number" />
+		<input type="text"  name="officername" placeholder="Officer Name" />
+         <input type="text" name="Position" placeholder="Position" />	
+		<input type="text"  name="Address" placeholder="Address" />
+		<input type="text"  name="Telephone" placeholder="Telephone" />
+		<input type="text"  name="Businesstype" placeholder="Business Type" />
+		<input type="text"  name="NumberofEmployees" placeholder="Number of Employees" />
+		<input type="text" name="Numberofcustomers" placeholder="Number of Customers" />		
+		
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">More About Your Business</h2>
+		<h3 class="fs-subtitle">Create Partnership with Merchants</h3>
+		
+        <table width="100%" border="0">
+  <tr>
+    <td width="95%"><p align="left" >We are a regular advertisers at Citystars </p></td>
+    <td width="5%"><input  type="checkbox" value="" checked="checked" /></td>
+
+  </tr>
+  <tr>
+<td><p align="left">Our Business is Based on Strong Branding </p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+<td><p align="left">We depend on regular Marketing activities for our Business</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+  <td><p align="left">We are interested in Social and Digital Media Marketing</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+<td><p align="left">Our Customers will interested in Citystars Loyalty Program to enjoy new offers </p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+  <td><p align="left">We would like to be associated with Citystars as Partners</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+  <td><p align="left">We would interested to pay for Business Intelligence Reports</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+  <td><p align="left">Our Business particpates in Trade shows, events and exhibitions</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  <tr>
+  <td><p align="left">We would like Corporate Dine and Entertain Experience at Citystars </p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  
+  <tr>
+  <td><p align="left">We accept the Loyalty Terms and Conditions</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  
+  <tr>
+  <td><p align="left">We want to recieve corporate offers from Citystars</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+  
+  <tr>
+  <td><p align="left">Allow partners to send us B2B offers and related services</p></td>
+    <td><input  type="checkbox" value="" checked="checked" /></td>
+  </tr>
+</table>
+<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-title">Upload your Customer Database</h2>
+		<h3 class="fs-subtitle">Become part of a larger Digital Marketing Platform</h3>
+		<style>
+  #progress_bar {
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid #000;
+    font-size: 14px;
+    clear: both;
+    opacity: 0;
+    -moz-transition: opacity 1s linear;
+    -o-transition: opacity 1s linear;
+    -webkit-transition: opacity 1s linear;
+  }
+  #progress_bar.loading {
+    opacity: 1.0;
+  }
+  #progress_bar .percent {
+    background-color: #99ccff;
+    height: auto;
+    width: 0;
+  }
+</style>
+
+<input type="file" id="files" name="file" />
+<button onclick="abortRead();">Cancel read</button>
+<div id="progress_bar"><div class="percent">0%</div></div>
+
+<script type="text/javascript" >
+             //<![CDATA[
+    var reader;
+    var progress = document.querySelector('.percent');
+
+    function abortRead() {
+        reader.abort();
+    }
+
+    function errorHandler(evt) {
+        switch (evt.target.error.code) {
+            case evt.target.error.NOT_FOUND_ERR:
+                alert('File Not Found!');
+                break;
+            case evt.target.error.NOT_READABLE_ERR:
+                alert('File is not readable');
+                break;
+            case evt.target.error.ABORT_ERR:
+                break; // noop
+            default:
+                alert('An error occurred reading this file.');
+        };
+    }
+
+    function updateProgress(evt) {
+        // evt is an ProgressEvent.
+        if (evt.lengthComputable) {
+            var percentLoaded = Math.round((evt.loaded / evt.total) * 100);
+            // Increase the progress bar length.
+            if (percentLoaded < 100) {
+                progress.style.width = percentLoaded + '%';
+                progress.textContent = percentLoaded + '%';
+            }
+        }
+    }
+
+    function handleFileSelect(evt) {
+        // Reset progress indicator on new file selection.
+        progress.style.width = '0%';
+        progress.textContent = '0%';
+
+        reader = new FileReader();
+        reader.onerror = errorHandler;
+        reader.onprogress = updateProgress;
+        reader.onabort = function (e) {
+            alert('File read cancelled');
+        };
+        reader.onloadstart = function (e) {
+            document.getElementById('progress_bar').className = 'loading';
+        };
+        reader.onload = function (e) {
+            // Ensure that the progress bar displays 100% at the end.
+            progress.style.width = '100%';
+            progress.textContent = '100%';
+            setTimeout("document.getElementById('progress_bar').className='';", 2000);
+        }
+
+        // Read in the image file as a binary string.
+        reader.readAsBinaryString(evt.target.files[0]);
+    }
+
+    document.getElementById('files').addEventListener('change', handleFileSelect, false);
+     //]]>
+</script>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="submit" onClick="location.href='RegDone.xhtml' " />
+	</fieldset>
+</form>
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<br/>
+</section>
+        <!--footer --> 
+ <ui:include src="views/footer.xhtml" />
+    
+</h:body>
+
+
+
+</html>
