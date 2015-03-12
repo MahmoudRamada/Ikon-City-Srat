@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <ui:include src="views/header.xhtml" />  
+        
+    </h:head>
+    <h:body>
+
+        <section class="page_section" id="clients"><!--page_section-->
+
+<div class="container">
+      <form  id="msform"  action="CustomerProfile.xhtml" style="height:286px;">
+	<!-- progressbar -->
+	<fieldset>
+		<h2 class="fs-title">Customer Log In</h2>
+		<h3 class="fs-subtitle">*****</h3>
+		<input type="text" name="fname" placeholder="User Name" />
+		<input type="password" name="pass" placeholder="Password" />
+		
+		<input type="submit" name="submit" class="submit action-button" value="Log In" onClick="location.href='CustomerProfile.xhtml' " />
+                <br/><br/>
+                <center>
+                    <div class="forgot" align="center">
+			<a href="#">forgot password?</a>
+		</div>	
+                    </center>
+	</fieldset>
+</form>
+
+  </div>
+        </section>
+        <ui:include src="views/footer.xhtml" />
+
+
+    </h:body>
+
+
+
+</html>
+
