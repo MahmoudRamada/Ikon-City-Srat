@@ -19,36 +19,29 @@
     </h:head>
     <h:body>
                
-<footer class="footer_wrapper" id="contact">
+
       <section class="page_section contact" id="contact">
-        <div class="col-lg-4 wow fadeInLeft">	
-		 <div class="contact_info">
-                            <div class="detail">
-                                <h4>UNIQUE Infoway</h4>
-                                <p>104, Some street, NewYork, USA</p>
-                            </div>
-          <ul class="social_links">
-            <li class="twitter animated bounceIn wow delay-02s"><a href="javascript:void(0)"><i class="fa fa-twitter"></i></a></li>
-            <li class="facebook animated bounceIn wow delay-03s"><a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
-            <li class="pinterest animated bounceIn wow delay-04s"><a href="javascript:void(0)"><i class="fa fa-pinterest"></i></a></li>
-            <li class="gplus animated bounceIn wow delay-05s"><a href="javascript:void(0)"><i class="fa fa-google-plus"></i></a></li> 
-          </ul>
-        </div>
-        <div class="col-lg-8 wow fadeInLeft delay-06s">
-          <div class="form">
-            <input class="input-text" type="text" name="" value="Your Name *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;"/>
-            <input class="input-text" type="text" name="" value="Your E-mail *" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;"/>
-            <textarea class="input-text text-area" cols="0" rows="0" onFocus="if(this.value==this.defaultValue)this.value='';" onBlur="if(this.value=='')this.value=this.defaultValue;">Your Message *</textarea>
-            <input class="input-btn" type="submit" value="send message"/>
-          </div>
-        </div>
-      </div>
+      <h:form id="msform">
+       <fieldset>
+				<h2 Class="fs-title" >Send E-mail</h2>
+				
+				<p:inputText placeholder="From" required="true"
+					value="#{registerView.user.emailId}" />
+				<p:inputText placeholder="Subject"
+					value="#{registerView.user.facebook}" />
+				<TEXTAREA placeholder="Body" required="true"
+					value="#{registerView.user.password}" />
+				<p:commandButton id="submitButton" value="Submit" styleClass="submit action-button"
+					actionListener="#{registerView.saveUser}" action="RegDone"/>
+			</fieldset>
+			</h:form>
+			<div style="height: 400px" ></div>
     </section>
   
   <div class="container">
-    <div class="footer_bottom"><span>Copyright © 2014,    Template by <a href="http://webthemez.com">WebThemez.com</a>. </span> </div>
+     <div class="footer_bottom"><span>Copyright © 2015,    Powered by <a href="http://www.masrurgroup.com">IKONSOFT</a>. </span> </div>
   </div>
-</footer>
+
 
 </h:body>
 

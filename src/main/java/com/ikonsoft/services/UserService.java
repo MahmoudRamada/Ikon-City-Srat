@@ -19,9 +19,6 @@ public class UserService {
           id = user.getUserId();
         System.out.println("\n\nPerson Id :"+id);
         } catch (RuntimeException e) {
-            if (trns != null) {
-                trns.rollback();
-            }
             e.printStackTrace();
         }  
                      	          

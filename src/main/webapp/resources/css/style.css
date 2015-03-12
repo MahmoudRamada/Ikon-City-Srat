@@ -785,17 +785,17 @@ img {
 }
  
 #aboutUs {
-    padding: 60px 0;
+    padding: 0px 0;
 }
 
 /* Contact
 ---------------------------------*/
 .page_section.contact {
-    padding: 90px 0 100px;
+    padding: 1px 0 10px;
 }
  
 .contact_section {
-    margin: 0 0 60px 0;
+    margin: 0 0 0px 0;
 }
 
 .contact_section h2 {
