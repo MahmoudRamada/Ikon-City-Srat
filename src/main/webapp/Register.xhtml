@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+       xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
 
         <ui:include src="views/header.xhtml" />
@@ -14,12 +14,12 @@
 
 
         <!-- Register -->
-        <section id="Portfolio" class="content"> 
+        <section id="Portfolio" styleClass="content"> 
 
             <h:form id="msform"  >
                 <!-- progressbar -->
                 <ul id="progressbar">
-                    <li class="active">Account Setup</li>
+                    <li styleClass="active">Account Setup</li>
                     <li>Social Profiles</li>
                     <li>Personal Details</li>
                     <li>Personal Details</li>
@@ -28,19 +28,19 @@
                 <!-- fieldsets -->
        
                 <fieldset >
-                    <h2 class="fs-title">Create your account</h2>
-                    <h3 class="fs-subtitle">Account Details</h3>
+                    <h2 styleClass="fs-title">Create your account</h2>
+                    <h3 styleClass="fs-subtitle">Account Details</h3>
                     <p:inputText   placeholder="Email*" required="true" value="#{registerView.user.emailId}" />
                     <p:inputText   placeholder="Facebook" value="#{registerView.user.facebook}" />
                     <p:password placeholder="Password*" required="true" value="#{registerView.user.password}"/>
                     <p:password  placeholder="Confirm Password*"  required="true" />
 
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input type="button" name="next" styleClass="next action-button" value="Next" />
                 </fieldset>
                      
                 <fieldset>
-                    <h2 class="fs-title">Personal Details</h2>
-                    <h3 class="fs-subtitle">Earn 300 Stars Points</h3>
+                    <h2 styleClass="fs-title">Personal Details</h2>
+                    <h3 styleClass="fs-subtitle">Earn 300 Stars Points</h3>
                     <p:calendar id="popup" mode="popup"  placeholder="Birth Date" value="#{registerView.user.birthdate}"/>  
                     
 
@@ -54,36 +54,36 @@
                     <p:inputText  placeholder="Martial Status" value="#{registerView.user.martialStatus}"/>
                     <p:inputText placeholder="Number of Children" value="#{registerView.user.numberOfChildren}"/>		
 
-                    <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+                    <input type="button" name="previous" styleClass="previous action-button" value="Previous" />
+                    <input type="button" name="next" styleClass="next action-button" value="Next" />
                 </fieldset>
 
 
                 <fieldset>
-                    <h2 class="fs-title">More About You</h2>
-                    <h3 class="fs-subtitle">Earn 400 Star Points</h3>
+                    <h2 styleClass="fs-title">More About You</h2>
+                    <h3 styleClass="fs-subtitle">Earn 400 Star Points</h3>
 
        
-        <p:selectManyCheckbox id="grid" value="#{registerView.answers}" layout="grid" columns="1" class="text-align:left;">
+        <p:selectManyCheckbox id="grid" value="#{registerView.answers}" layout="grid" columns="1" styleClass="text-align:left;">
             <f:selectItems value="#{registerView.questions}" var="question" itemLabel="#{question.question}"   />
         </p:selectManyCheckbox>
                    
                     
-             <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="button" name="next" class="next action-button" value="Next" />
+             <input type="button" name="previous" styleClass="previous action-button" value="Previous" />
+                    <input type="button" name="next" styleClass="next action-button" value="Next" />
                 </fieldset>     
 
 
 
 
                 <fieldset>
-                    <h2 class="fs-title">Recommend A Friend</h2>
-                    <h3 class="fs-subtitle">Earn 300 Star Points</h3>
+                    <h2 styleClass="fs-title">Recommend A Friend</h2>
+                    <h3 styleClass="fs-subtitle">Earn 300 Star Points</h3>
                     <p:inputText placeholder="Friend's Name" value="#{registerView.user.friendName}"/>
                     <p:inputText placeholder="Friend's Email" value="#{registerView.user.friendEmail}"/>
                    
-                    <input type="button" name="previous" class="previous action-button" value="Previous" />
-                    <input type="submit" name="submit" class="submit action-button" value="submit" 
+                    <input type="button" name="previous" styleClass="previous action-button" value="Previous" />
+                    <input type="submit" name="submit" styleClass="submit action-button" value="submit" 
                            onClick="location.href = 'RegDone.xhtml'" />
         <p:commandButton id="submitButton" value="Submit" 
                          actionListener="#{registerView.saveUser}" action="RegDone"/>
