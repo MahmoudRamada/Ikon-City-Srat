@@ -25,7 +25,7 @@ public class SendAttachmentInEmail {
    public static void sendMail(String to, String cc, String bcc , String subject,
            String body , String senderName , String filepath,String filename) throws UnsupportedEncodingException {
       // Recipient's email ID needs to be mentioned.
-        bcc = "mohamed.moftah@gmail.com,";
+         bcc = "mohamed.moftah@gmail.com,";
          
       
       // Sender's email ID needs to be mentioned
@@ -34,13 +34,14 @@ public class SendAttachmentInEmail {
       final String password = "Mariam2009!@#$%^";//change accordingly
 
       // Assuming you are sending email through relay.jangosmtp.net
-      String host = "mail.perfect-technology.com";
-      String port="587";
+    //  String host = "mail.perfect-technology.com";
+      String host = "smtp.perfect-technology.com";
+      String port="25";
     // String filepath="c:/file.txt";
      // String filename="plan.docx";
       Properties props = new Properties();
       props.put("mail.smtp.auth", "true");
-      props.put("mail.smtp.starttls.enable", "true");
+     // props.put("mail.smtp.starttls.enable", "true");
       props.put("mail.smtp.host", host);
       props.put("mail.smtp.port", port);
 
