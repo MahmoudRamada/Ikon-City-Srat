@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        
+ <ui:include src="views/header.xhtml" />
+ 
+    </h:head>
+    <h:body>
+               
+<br />
+<div class="wrap" >
+    <div class="contact-form">
+<!-- start-form -->
+	<form class="contact_form" action="#" method="post" name="contact_form">
+		<h1>Login Into Customer Service</h1>
+	    <ul>
+	        <li>
+	           <p:inputText class="textbox1" id="email" placeholder="info@Citystars.com"/>
+                    
+	            <span class="form_hint">Enter a valid email</span>
+	             <p><img src="../resources/img/contact.png" alt="" /></p>
+	        </li>
+	        <li>
+                    <input type="password" name="website" class="textbox2" placeholder="password"></input>
+	            <p><img src="../resources/img/lock.png" alt="" /></p>
+	        </li>
+         </ul>
+       	 	<input type="submit" name="Sign In" value="Sign In"/>
+			<div class="clear"></div>	
+                        <label class="checkbox"><input type="checkbox" name="checkbox" ></input><i></i>Remember me</label>
+		<div class="forgot">
+			<a href="#">forgot password?</a>
+		</div>	
+		<div class="clear"></div>	
+	</form>
+<!-- end-form -->
+<!-- start-account -->
+<div class="account">
+	<center><a href="#">Log in Other Roles ! </a></center>
+        <div class="span"><a href="Users_Login_Business.xhtml"><img src="../resources/img/facebook.png" alt=""/><i>Sign In as Business User</i><div class="clear"></div></a></div>	
+        <div class="span1"><a href="Users_Login_ITSupport.xhtml"><img src="../resources/img/twitter.png" alt=""/><i>Sign In as IT Support User</i><div class="clear"></div></a></div>
+        <div class="span2"><a href="Users_Login_SuperUser.xhtml"><img src="../resources/img/gplus.png" alt=""/><i>Sign In as Super User</i><div class="clear"></div></a></div>
+</div>	
+<!-- end-account -->
+<div class="clear"></div>	
+</div>
+    </div>
+<br />
+        <!--footer --> 
+ <ui:include src="views/footer.xhtml" />
+    
+</h:body>
+
+
+
+</html>
