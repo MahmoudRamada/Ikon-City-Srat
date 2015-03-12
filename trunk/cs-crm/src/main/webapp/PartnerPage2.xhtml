@@ -19,14 +19,14 @@
 
 		<p:growl id="msgs" showDetail="true" />
 
-
-		<p:tabView id="tabview" >
+		<div style="height: 30px"></div>
+		<p:tabView id="tabview">
 			<p:tab title="Status" name="#tab1">
 				<iframe src="patnerStatus.xhtml" width="100%" height="400px"></iframe>
 			</p:tab>
 
 
-			<p:tab title="Request for Campaign">
+			<p:tab title="Request for Campaign" >
 
 
 				<h:form id="form1" enctype="multipart/form-data">
@@ -164,10 +164,6 @@
 						</p:commandButton>
 					</h:panelGrid>
 
-					<p:separator />
-					<p:commandButton value="Submit" update="display"
-						oncomplete="PF('Adlg').show()" icon="ui-icon-check" />
-
 					<p:dialog header="Selected Values" modal="true" showEffect="fade"
 						widgetVar="Adlg" resizable="false">
 						<p:panelGrid columns="2" id="display" columnClasses="label,output">
@@ -180,7 +176,7 @@
 					</p:dialog>
 
 				</h:form>
-
+<div style="height: 80px"></div>
 			</p:tab>
 
 
@@ -274,12 +270,10 @@
 						</p:dialog>
 					</h:panelGrid>
 				</h:form>
-
+<div style="height: 140px"></div>
 			</p:tab>
 		</p:tabView>
-
-
-
+		<div style="height: 30px"></div>
 		<ui:include src="views/footer.xhtml" />
 
 

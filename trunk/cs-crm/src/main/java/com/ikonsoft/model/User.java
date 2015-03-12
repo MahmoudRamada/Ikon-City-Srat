@@ -91,6 +91,10 @@ public class User implements Serializable {
     private String friendName;
     @Column(name = "friendEmail")
     private String friendEmail;
+    
+    @Column(name = "authority")
+    private String authority;
+    
     @ManyToMany(mappedBy = "userCollection")
     private Collection<Role> roleCollection;
 
@@ -276,5 +280,13 @@ public class User implements Serializable {
     public String toString() {
         return "com.ikonsoft.model.User[ userId=" + userId + " ]";
     }
+
+	private String getAuthority() {
+		return authority;
+	}
+
+	private void setAuthority(String authority) {
+		this.authority = authority;
+	}
     
 }
